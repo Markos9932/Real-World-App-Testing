@@ -60,7 +60,7 @@ context('Check various scenarios', () => {
     login.verifyInvalidUsernameOrPasswordText(test_data_login.invalidUsernameOrPasswordText);
   });
 
-  it.only('Check login with valid credentials', function () {
+  it('Check login with valid credentials', function () {
     home.homePageLoadingResponse();
     login.navigateToLoginPage();
     login.populateUsernameField(test_data_reg_user.username);
@@ -78,7 +78,7 @@ context('Check various scenarios', () => {
 
 
 
-    //home.clickOnMyAccountLink();
+    
 
     
   });

@@ -70,6 +70,26 @@ clickOnElement(locator) {
     .click();
 }
 
+ /**
+   * Verify visibility of value in element with locator and text
+   * @param {string} locator - Element locator
+   * @param {string} text - Element text
+   * @returns {void} void
+   */
+ verifyVisibilityOfElementWithValue(locator, text) {
+  cy.get(locator, { timeout: this.waitInterval })
+    .should('have.value', text);
+}
+
+/**
+   * Waiting method for usage in uper layers
+   * @param {string} value - Time in ms
+   * @returns {void} void
+   */
+waitPeriod(value) {
+  cy.wait(value);
+}
+
  
 
 

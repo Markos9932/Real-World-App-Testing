@@ -63,7 +63,7 @@ context('Check various scenarios', () => {
     registration.verifySignUpButtonDisabled();
   });
 
-  it.only('Check registration with valid credentials', function () {
+  it('Check registration with valid credentials', function () {
     // initialization of waits
     login.loginPageLoadingResponse();
     registration.navigateToRegistrationPage();
