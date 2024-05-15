@@ -4,7 +4,6 @@ export default class Registration extends Commands {
   // Locator Region
   constructor() {
     super();
-    this.registrationRoute = ''
     this.registrationPageUrl = '/signup';
     this.signUpTitle = "[data-test='signup-title']";
     this.signUpButton = '[data-test="signup-submit"]';
