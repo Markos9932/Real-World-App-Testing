@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "cypress:open": "cypress open",
+    "test:headless": "cypress run --headless",
+    "cypress:runChrome": "cypress run --browser chrome",
+    "test:specific-ts_001_registration": "cypress run --spec cypress/e2e/ts_001_registration/ts_001_registration.cy.js --headless"
   },
   "author": "",
   "license": "ISC",
