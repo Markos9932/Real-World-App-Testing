@@ -5,6 +5,7 @@ export default class Home extends Commands {
   constructor() {
     super();
     this.homeRoute = '**/localhost:3001/login';
+    this.personalPageUrl = '/personal';
     this.myAccount = '[href="\/user\/settings"] .MuiTypography-displayBlock';
     this.bankAccount = '[href="\/bankaccounts"] .MuiTypography-displayBlock'
     this.nextButton = '[data-test="user-onboarding-next"]';
@@ -39,6 +40,14 @@ export default class Home extends Commands {
     cy.wait('@homePageLoading')
         .its('response.statusCode')
         .should('eq', 200);
+  }
+
+  /**
+   * Navigates to personal page
+   * @returns {void} void
+   */
+  navigateToPersonalPage() {
+    cy.visit(this.personalPageUrl);
   }
 
   /**

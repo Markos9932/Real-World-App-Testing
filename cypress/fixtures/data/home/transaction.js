@@ -1,8 +1,8 @@
 export default {
   transactionPartner: "Ted",
   transactionPartnerHeader: "Ted Parisian",
-  amount: "500",
-  value: "$500",
+  amount: "333",
+  value: "$333",
   note: "Payment",
   paidText: "Paid",
   forText: "for"
