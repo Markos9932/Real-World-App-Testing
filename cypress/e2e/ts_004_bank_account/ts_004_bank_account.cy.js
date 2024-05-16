@@ -45,11 +45,11 @@ context('Check various scenarios', () => {
     bank_account.clickOnCreateButton();
     bank_account.verifyCreateAccountHeader(test_data_bank_account.createAccountText);
     bank_account.populateBankNameField(test_data_bank_account.bankNameField1);
-    bank_account.populateRoutingNumberField(test_data_bank_account.accountNumber1);
+    bank_account.populateAccountNumberField(test_data_bank_account.accountNumber1);
     bank_account.populateRoutingNumberField(test_data_bank_account.routingNumber1);
     bank_account.clickOnSaveButton();
     bank_account.verifyBankAccountHeader(test_data_bank_account.bankAccountHeaderText);
-    bank_account.verifyBankAccountTitle(test_data_bank_account.accountNumber1);
+    bank_account.verifyBankAccountTitle(test_data_bank_account.bankNameField1);
 
 
     //bank_account.clickOnDeleteButton();

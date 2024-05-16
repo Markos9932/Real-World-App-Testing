@@ -5,12 +5,14 @@ export default class Transaction extends Commands {
   constructor() {
     super();
     this.searchField = '#user-list-search-input';
-    this.userList = '[data-test="user-list-item-uBmeaz5pX"]';
+    this.userList = '.MuiListItemText-root.MuiListItemText-multiline';
     this.amount = '#amount';
     this.note = '#transaction-create-description-input';
     this.payButton = '[data-test="transaction-create-submit-payment"]';
     this.transactionHeader = '.MuiGrid-justify-content-xs-center .MuiTypography-gutterBottom';
-    this.returnToTransButton = '[data-test="new-transaction-return-to-transactions"]'
+    this.returnToTransButton = '[data-test="new-transaction-return-to-transactions"]';
+    this.createAnotherTrans = '[data-test="new-transaction-create-another-transaction"]';
+    this.newTransactionContainer = '.MuiListItemText-root.MuiListItemText-multiline'
  
    }
 
@@ -28,7 +30,7 @@ export default class Transaction extends Commands {
    * @returns {void} void
    */
   clickOnUserListButton() {
-    this.clickOnElement(this.userList);
+    this.clickOnFirstElement(this.userList);
   }
 
   /**
@@ -80,6 +82,24 @@ export default class Transaction extends Commands {
    clickReturnToTransButton() {
     this.clickOnElement(this.returnToTransButton);
   }
+
+   /**
+   * Clicks Create another transaction button
+   * @returns {void} void
+   */
+   clickCreateAnotherTransButton() {
+    this.clickOnElement(this.createAnotherTrans);
+  }
+
+  /**
+   * Clicks on Payment Container
+   * @returns {void} void
+   */
+  clickOnPaymentElement(text) {
+    this.clickOnPaymentContainer(this.newTransactionContainer, text);
+  }
+
+  
 
   
 

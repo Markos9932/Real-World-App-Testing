@@ -49,6 +49,7 @@ context('Check various scenarios', () => {
     login.navigateToLoginPage();
     login.populateUsernameField(test_data_reg_user.username);
     login.populatePasswordField(test_data_login.passwordWrong);
+    login.clickOnUsernameField();
     login.verifyWrongPasswordText(test_data_reg.wrongPassText);
     login.verifySignInButtonDisabled();
   });
@@ -56,7 +57,8 @@ context('Check various scenarios', () => {
   it('Check login with invalid password', function () {
     login.navigateToLoginPage();
     login.populateUsernameField(test_data_reg_user.username);
-    login.verifyWrongPasswordText(test_data_login.invalidPassword);
+    login.populatePasswordField(test_data_login.invalidPassword);
+    login.clickOnSignInButton();
     login.verifyInvalidUsernameOrPasswordText(test_data_login.invalidUsernameOrPasswordText);
   });
 

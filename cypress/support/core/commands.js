@@ -100,6 +100,77 @@ waitPeriod(value) {
     .should('be.visible');
 }
 
+ /**
+   * Verify visibility and data inside the user container
+   * @param {string} containerLocator - Container locator containing user information
+   * @param {string} number - Expected number of the container
+   * @param {string} text - Text
+   * @returns {void} void
+   */
+ verifyVisibilityAndUserDataInContainer(containerLocator, number, text, ) {
+  cy.get(containerLocator)
+    .eq(number)
+    .should('contain', text);
+ }
+
+ /**
+ * Click on first element by provided locator
+ * @param {string} locator - Element locator
+ * @returns {void} void
+ */
+clickOnFirstElement(locator) {
+  this.verifyVisibilityOfElement(locator);
+
+  cy.get(locator, { timeout: this.waitInterval })
+    .eq(0)
+    .click();
+}
+
+ /**
+ * Click on container by provided text
+ * @param {string} containerLocator - Container locator containing user information
+ * @param {string} text - Expected name inside the container
+ * @returns {void} void
+ */
+ clickOnPaymentContainer(containerLocator, text) {
+  cy.contains(containerLocator, text)
+    .should('be.visible')
+    .click();
+}
+
+/**
+ * Set slider value 
+ * @param {string} amount - Amount for change
+ * @param {string} sliderThumbLocator - Locator for the slider thumb element
+ * @returns {void} void
+ */
+ setSliderValue(sliderThumbLocator) {
+  cy.get(sliderThumbLocator)
+  .should('have.attr', 'aria-valuenow', 2)
+    .type('{rightarrow}' )
+  
+  
+ 
+  
+  
+ 
+
+}
+
+ /**
+   * Force Click on element by provided locator
+   * @param {string} locator - Element locator
+   * @returns {void} void
+   */
+ forceClickOnElement(locator) {
+  this.verifyVisibilityOfElement(locator);
+
+  cy.get(locator, { timeout: this.waitInterval })
+    .click({ force: true });
+}
+
+    
+
 
 
 

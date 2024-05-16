@@ -112,6 +112,14 @@ export default class Login extends Commands {
   }
 
   /**
+   * Clicks on username field
+   * @returns {void} void
+   */
+  clickOnUsernameField() {
+    this.clickOnElement(this.usernameField);
+  }
+
+  /**
    * Verify Username  helper text
    * @returns {void} void
    */
