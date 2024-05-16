@@ -14,7 +14,6 @@ export default class Login extends Commands {
     this.usernameField = '#username';
     this.passwordField = '#password';
     this.invalidUsernameOrPassText = 'div[role="alert"] > .MuiAlert-message'
-  
   }
 
    /**
@@ -151,16 +150,6 @@ export default class Login extends Commands {
         this.populatePasswordField(user.password);
         this.clickOnSignInButton();
       });
-
-  
-
-  
-
-
-
-  
-
-  
 
   }
 }

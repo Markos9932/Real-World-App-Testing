@@ -29,6 +29,7 @@ context('Check various scenarios', () => {
 
   it('Validate registration form is present', function () {
     registration.navigateToRegistrationPage();
+
     registration.verifySignUpTitle(test_data_reg.signUpTitle);
     registration.verifySignUpButtonEnabled();
     registration.verifySigninLink(test_data_reg.signInLinkText);
@@ -37,6 +38,7 @@ context('Check various scenarios', () => {
 
   it('Check registration with empty fields ', function () {
     registration.navigateToRegistrationPage();
+
     registration.clickOnSignUpButton();
     registration.verifyFirstNameIsRequired(test_data_reg.firstNameText);
     registration.verifySignUpButtonDisabled();
@@ -44,20 +46,24 @@ context('Check various scenarios', () => {
 
   it('Check registration with invalid password - 3 characters', function () {
     registration.navigateToRegistrationPage();
+
     registration.populateFirstNameField(test_data_reg_user.firstName);
     registration.populateLastNameField(test_data_reg_user.lastName);
     registration.populateUsernameField(test_data_reg_user.username);
     registration.populatePasswordField(test_data_reg_user.passwordWrong);
+
     registration.verifyWrongPasswordText(test_data_reg.wrongPassText);
     registration.verifySignUpButtonDisabled();
   });
 
   it('Check registration with non matching passwords', function () {
     registration.navigateToRegistrationPage();
+
     registration.populateFirstNameField(test_data_reg_user.firstName);
     registration.populateLastNameField(test_data_reg_user.lastName);
     registration.populateUsernameField(test_data_reg_user.username);
     registration.populatePasswordField(test_data_reg_user.password);
+
     registration.populateConfirmPasswordField(test_data_reg_user.confirmPassWrong);
     registration.verifyWrongConfirmPassText(test_data_reg.wrongConfirmPassText);
     registration.verifySignUpButtonDisabled();
@@ -66,6 +72,7 @@ context('Check various scenarios', () => {
   it('Check registration with valid credentials', function () {
     // initialization of waits
     login.loginPageLoadingResponse();
+
     registration.navigateToRegistrationPage();
     registration.populateAndRegisterUserData(
       test_data_reg_user.firstName,
@@ -75,6 +82,7 @@ context('Check various scenarios', () => {
       test_data_reg_user.confirmPass
     );
     login.waitLoginPageLoadingResponse();
+    
     login.verifySignInTitle(test_data_reg.signInTitle);
     login.verifySignUpLink(test_data_reg.signUpLinkText);
     login.verifySignInButtonPresence(test_data_reg.signInButtonTitle);

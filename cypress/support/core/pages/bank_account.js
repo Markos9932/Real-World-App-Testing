@@ -14,7 +14,7 @@ export default class Bank_account extends Commands {
     this.saveButton = '[data-test="bankaccount-submit"]';
     this.bankAccountText = '[data-test="bankaccount-list"]';
    
-    }
+  }
 
     /**
    * Verify  Bank Account Header
@@ -91,16 +91,4 @@ export default class Bank_account extends Commands {
     this.verifyVisibilityOfElementWithText(this.bankAccountText, text);
   }
 
- 
-
-  
-
-  
-
-
-
-  
-
-  
-
-  }
+}

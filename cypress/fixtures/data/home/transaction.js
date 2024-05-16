@@ -12,6 +12,4 @@ export default {
   note: "Payment",
   paidText: "Paid",
   forText: "for"
- 
- 
-}
+ }

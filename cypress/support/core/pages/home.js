@@ -17,10 +17,6 @@ export default class Home extends Commands {
     this.doneButton = '[data-test="user-onboarding-next"]';
     this.logoutButton = 'div[role="button"]  .MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock.MuiTypography-root';
     this.newTransaction = '[data-test="nav-top-new-transaction"]';
-    
-    
-  
-  
   }
 
    /**
@@ -141,16 +137,4 @@ export default class Home extends Commands {
     this.clickOnElement(this.newTransaction);
   }
  
-
-
-  
-
-  
-
-
-
-  
-
-  
-
-  }
+}

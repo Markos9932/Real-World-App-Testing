@@ -3,7 +3,4 @@ export default {
   bankNameField: "Test Bank",
   accountNumber: "222222222",
   routingNumber: "333333333",
-
-
- 
 }

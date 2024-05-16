@@ -5,5 +5,4 @@ export default {
   transPartner: "Kristian Bradtke",
   transPartner1: "Ted Parisian",
   amountSlider: "322"
-  
 }

@@ -8,9 +8,7 @@ export default class Personal extends Commands {
     this.transactionContainer = '.MuiListItem-root.MuiListItem-gutters.MuiListItem-alignItemsFlexStart';
     this.amountSlider = '[data-test="transaction-list-filter-amount-range-button"]';
     this.rangeSlider = 'data-test="transaction-list-filter-amount-range-slider"'
-    
- 
-   }
+  }
 
    /**
     * Personal loading state
@@ -54,16 +52,4 @@ export default class Personal extends Commands {
   settingSliderValue() {
     this.setSliderValue(this.rangeSlider);
   }
-
-
-
-  
-
-  
-  
-
-
-
- 
-
 }

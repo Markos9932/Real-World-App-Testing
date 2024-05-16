@@ -2,23 +2,17 @@
 
 import Login from "../../support/core/pages/login";
 import Home from "../../support/core/pages/home";
-import My_account from "../../support/core/pages/my_account";
-import Bank_account from "../../support/core/pages/bank_account";
 import Transaction from "../../support/core/pages/transaction";
-import test_data_reg_user from "../../fixtures/data/users/registration_user";
-import test_data_bank_account from "../../fixtures/data/home/bank_account";
 import test_data_transaction from "../../fixtures/data/home/transaction";
 import { USERS } from "../../support/credentials";
 
 
 const login = new Login();
 const home = new Home();
-const my_account = new My_account();
-const bank_account = new Bank_account();
 const transaction = new Transaction();
 
 
-describe('Check modifications to account information', () => {
+describe('Check Transactions and payments', () => {
     // setup executed before each test case
     beforeEach(() => {
 
@@ -36,9 +30,10 @@ describe('Check modifications to account information', () => {
   
 context('Check various scenarios', () => {
 
-  it('Modify account information', function () {
+  it('Create a new transaction and validate the form', function () {
     home.homePageLoadingResponse();
     login.navigateToLoginPage();
+    
     login.userLogin(USERS.test_user);
     home.waitHomePageLoadingResponse();
 
@@ -46,6 +41,7 @@ context('Check various scenarios', () => {
     transaction.populateSearchField(test_data_transaction.transactionPartner);
     transaction.clickOnUserListButton();
     transaction.verifyVisibilityOfText(test_data_transaction.transactionPartnerHeader);
+
     transaction.populateAmountField(test_data_transaction.amount);
     transaction.verifyAmountField(test_data_transaction.value);
     transaction.populateNoteField(test_data_transaction.note);

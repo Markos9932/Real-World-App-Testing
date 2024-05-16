@@ -107,20 +107,4 @@ export default class My_account extends Commands {
   clickOnLogoutButton() {
     this.clickOnElement(this.logoutButton);
   }
-
-
-
-
-  
-
-  
-
-  
-
-
-
-  
-
-  
-
-  }
+}

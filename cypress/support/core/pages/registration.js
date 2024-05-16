@@ -16,8 +16,7 @@ export default class Registration extends Commands {
     this.confirmPassField = '#confirmPassword';
     this.passwordHelperText = '#password-helper-text';
     this.confirmPassHelperText = '#confirmPassword-helper-text';
-
-  }
+}
 
   /**
    * Navigates to registration page
@@ -157,12 +156,4 @@ export default class Registration extends Commands {
   this.clickOnSignUpButton();
 }
 
-  
-
-
-
-  
-
-  
-
-  }
+}

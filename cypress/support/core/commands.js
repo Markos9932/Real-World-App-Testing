@@ -169,21 +169,4 @@ clickOnFirstElement(locator) {
     .click({ force: true });
 }
 
-    
-
-
-
-
-
-
-
- 
-
-
- 
- 
-
-
-
-
 }

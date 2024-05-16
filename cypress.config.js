@@ -9,8 +9,6 @@ module.exports = defineConfig({
     requestTimeout: 10000,
     responseTimeout: 30000,
    
-    
-
     e2e: {
         chromeWebSecurity: false,
         setupNodeEvents: function(on, config) {

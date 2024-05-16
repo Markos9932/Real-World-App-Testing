@@ -99,25 +99,4 @@ export default class Transaction extends Commands {
     this.clickOnPaymentContainer(this.newTransactionContainer, text);
   }
 
-  
-
-  
-
-
-
- 
-
-  
- 
-
-  
-
-  
-
-
-
-  
-
-  
-
-  }
+ }

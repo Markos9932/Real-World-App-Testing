@@ -40,10 +40,13 @@ context('Check various scenarios', () => {
 
     home.homePageLoadingResponse();
     login.navigateToLoginPage();
+
     login.populateUsernameField(test_data_reg_user.username);
     login.populatePasswordField(test_data_reg_user.password);
     login.clickOnSignInButton();
+
     home.waitHomePageLoadingResponse();
+
     my_account.verifySidenavFirstName(test_data_reg_user.firstName);
     my_account.verifySidenavUsername(test_data_reg_user.username);
     home.clickOnMyAccountLink();
@@ -57,6 +60,7 @@ context('Check various scenarios', () => {
 
     my_account.clickHomeLink();
     home.clickOnMyAccountLink();
+    
     my_account.verifySidenavFirstName(firstNameChanged);
     my_account.verifySidenavUsername(test_data_reg_user.username);
     my_account.verifyFirstNameChanged(firstNameChanged);
