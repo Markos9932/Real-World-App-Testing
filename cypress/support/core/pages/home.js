@@ -6,6 +6,7 @@ export default class Home extends Commands {
     super();
     this.homeRoute = '**/localhost:3001/login';
     this.myAccount = '[href="\/user\/settings"] .MuiTypography-displayBlock';
+    this.bankAccount = '[href="\/bankaccounts"] .MuiTypography-displayBlock'
     this.nextButton = '[data-test="user-onboarding-next"]';
     this.createBankAccountTitle = '[data-test="user-onboarding-dialog-title"]';
     this.bankNameField = '#bankaccount-bankName-input';
@@ -14,6 +15,7 @@ export default class Home extends Commands {
     this.saveButton = '[data-test="bankaccount-submit"]';
     this.doneButton = '[data-test="user-onboarding-next"]';
     this.logoutButton = 'div[role="button"]  .MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock.MuiTypography-root';
+    this.newTransaction = '[data-test="nav-top-new-transaction"]';
     
     
   
@@ -45,6 +47,14 @@ export default class Home extends Commands {
    */
   clickOnMyAccountLink() {
     this.clickOnElement(this.myAccount);
+  }
+
+  /**
+   * Clicks on Bank account link
+   * @returns {void} void
+   */
+  clickOnBankAccountLink() {
+    this.clickOnElement(this.bankAccount);
   }
 
   /**
@@ -113,6 +123,15 @@ export default class Home extends Commands {
   clickOnLogoutButton() {
     this.clickOnElement(this.logoutButton);
   }
+
+  /**
+   * Clicks on New Transaction button
+   * @returns {void} void
+   */
+  clickOnNewButton() {
+    this.clickOnElement(this.newTransaction);
+  }
+ 
 
 
   

@@ -12,6 +12,7 @@ export default class My_account extends Commands {
     this.homeLink = '.MuiList-padding.MuiList-root > div > a:nth-of-type(1)';
     this.sidenavFirstName = '[data-test="sidenav-user-full-name"]';
     this.sidenavUsername = '[data-test="sidenav-username"]';
+    this.logoutButton = 'div[role="button"]  .MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock.MuiTypography-root';
   
   }
 
@@ -97,6 +98,14 @@ export default class My_account extends Commands {
    */
   verifyLastNameChanged(text) {
     this.verifyVisibilityOfElementWithValue(this.lastNameUserSett, text);
+  }
+
+  /**
+   * Clicks on logout button
+   * @returns {void} void
+   */
+  clickOnLogoutButton() {
+    this.clickOnElement(this.logoutButton);
   }
 
 

@@ -90,6 +90,16 @@ waitPeriod(value) {
   cy.wait(value);
 }
 
+ /**
+   * Verify visibility of text with provided text
+   * @param {string} text - Element text
+   * @returns {void} void
+   */
+ verifyVisibilityOfText(text) {
+  cy.contains(text, { timeout: this.waitInterval })
+    .should('be.visible');
+}
+
  
 
 
