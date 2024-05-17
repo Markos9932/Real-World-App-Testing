@@ -7,7 +7,7 @@ export default class Personal extends Commands {
     this.personalRoute = '**/personal';
     this.transactionContainer = '.MuiListItem-root.MuiListItem-gutters.MuiListItem-alignItemsFlexStart';
     this.amountSlider = '[data-test="transaction-list-filter-amount-range-button"]';
-    this.rangeSlider = 'data-test="transaction-list-filter-amount-range-slider"'
+    this.rangeSlider = '[data-test="transaction-list-filter-amount-range-slider"]'
   }
 
    /**
@@ -49,7 +49,7 @@ export default class Personal extends Commands {
    * Setting range of slider
    * @returns {void} void
    */
-  settingSliderValue() {
-    this.setSliderValue(this.rangeSlider);
+  settingSliderValueCenter() {
+    this.clickOnSliderElementCenter(this.rangeSlider);
   }
 }

@@ -139,25 +139,6 @@ clickOnFirstElement(locator) {
 }
 
 /**
- * Set slider value 
- * @param {string} amount - Amount for change
- * @param {string} sliderThumbLocator - Locator for the slider thumb element
- * @returns {void} void
- */
- setSliderValue(sliderThumbLocator) {
-  cy.get(sliderThumbLocator)
-  .should('have.attr', 'aria-valuenow', 2)
-    .type('{rightarrow}' )
-  
-  
- 
-  
-  
- 
-
-}
-
- /**
    * Force Click on element by provided locator
    * @param {string} locator - Element locator
    * @returns {void} void
@@ -168,5 +149,24 @@ clickOnFirstElement(locator) {
   cy.get(locator, { timeout: this.waitInterval })
     .click({ force: true });
 }
+
+/**
+   * Click on slider element
+   * @param {string} locator - Element locator
+   * @param {string} x - x coordinate
+   * @param {string} y - y coordinate
+   */
+  clickOnSliderElementCenter(locator, x, y) {
+    cy
+      .get(locator).then(($canvas) => {
+        const coordinateX = x;
+        const coordinateY = y;
+
+        cy
+          .wrap($canvas)
+          .scrollIntoView()
+          .click('center');
+      });
+  }
 
 }

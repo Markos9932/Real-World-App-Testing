@@ -13,8 +13,7 @@ export default class Transaction extends Commands {
     this.returnToTransButton = '[data-test="new-transaction-return-to-transactions"]';
     this.createAnotherTrans = '[data-test="new-transaction-create-another-transaction"]';
     this.newTransactionContainer = '.MuiListItemText-root.MuiListItemText-multiline'
- 
-   }
+  }
 
    /**
    * Populates search field

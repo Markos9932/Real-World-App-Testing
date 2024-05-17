@@ -4,12 +4,14 @@ export default {
   transactionPartnerHeader: "Ted Parisian",
   transactionPartnerHeader1: "Kristian Bradtke",
   negativeAmount: "-",
-  amount: "333",
+  amount: "800",
   amount1: "700",
   amount2: "560",
-  value: "$333",
+  value: "$800",
   value1: "$700",
   note: "Payment",
   paidText: "Paid",
-  forText: "for"
+  forText: "for",
+  noTransText: 'No Transactions'
+  
  }

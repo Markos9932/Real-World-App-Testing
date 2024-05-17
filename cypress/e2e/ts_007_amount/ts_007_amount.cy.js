@@ -32,7 +32,7 @@ describe('Check multiple transactions and amount filter validation', () => {
   
 context('Check various scenarios', () => {
 
-  it.skip('Validate the amount filter after multiple transactions', function () {
+  it('Validate the amount of filter after multiple transactions', function () {
     home.homePageLoadingResponse();
     personal.personalPageLoadingResponse();
     login.navigateToLoginPage();
@@ -60,10 +60,12 @@ context('Check various scenarios', () => {
     transaction.clickOnPayButton();
 
     home.navigateToPersonalPage();
-    //personal.waitPersonalPageLoadingResponse();
+    personal.waitPersonalPageLoadingResponse();
     personal.clickOnAmmountSlider();
-    personal.settingSliderValue();
+    personal.settingSliderValueCenter();
 
+    personal.verifyVisibilityOfText(test_data_transaction.noTransText);
+ 
 
 
 
