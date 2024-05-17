@@ -165,7 +165,7 @@ clickOnFirstElement(locator) {
         cy
           .wrap($canvas)
           .scrollIntoView()
-          .click('center');
+          .click('center', {force: true});
       });
   }
 
