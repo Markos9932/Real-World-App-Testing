@@ -9,4 +9,6 @@ export default {
   confirmPassWrong: "2222",
   email: 'testemail@test.com',
   phoneNumber: '1111111',
+  username33: 'Dina20',
+  password33: 's3cret'
 }

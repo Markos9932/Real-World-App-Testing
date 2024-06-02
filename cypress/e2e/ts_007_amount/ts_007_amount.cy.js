@@ -65,26 +65,8 @@ context('Check various scenarios', () => {
     personal.settingSliderValueCenter();
 
     personal.verifyVisibilityOfText(test_data_transaction.noTransText);
- 
 
-
-
-
-
-
-   
-
-
-    
-
-
-
-
-    
-
-    
   });
-
 });
 
 });

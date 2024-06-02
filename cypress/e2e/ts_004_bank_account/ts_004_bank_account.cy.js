@@ -53,7 +53,7 @@ context('Check various scenarios', () => {
     bank_account.verifyBankAccountHeader(test_data_bank_account.bankAccountHeaderText);
     bank_account.verifyBankAccountTitle(test_data_bank_account.bankNameField1);
   });
-
+});
 });
 
-});
+
