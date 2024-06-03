@@ -42,9 +42,9 @@ it('Validate the response by checking available bank account information', funct
 
       // Compare bank account data with the data from task 4
       expect(listBankAccount[0]).to.deep.equal({
-        bankName: 'dddddd',
-        accountNumber: 'eeeeeeeee',
-        routingNumber: 'eeeeeeeee'
+        bankName: 'Test Bank',
+        accountNumber: '888888888',
+        routingNumber: '999999999'
       });
    
   });
