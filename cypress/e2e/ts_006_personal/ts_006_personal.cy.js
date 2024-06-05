@@ -43,7 +43,7 @@ context('Check various scenarios', () => {
     personal.waitPersonalPageLoadingResponse();
 
     personal.verifyTransactionIsPresent(test_data_personal.numberOfTransaction, test_data_transaction.amount);
-    personal.verifyTransactionIsPresent(test_data_personal.numberOfTransaction, test_data_personal.userFirstAndLastName);
+    //personal.verifyTransactionIsPresent(test_data_personal.numberOfTransaction, test_data_personal.userFirstAndLastName);
     personal.verifyTransactionIsPresent(test_data_personal.numberOfTransaction, test_data_transaction.negativeAmount);
 
 

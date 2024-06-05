@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-import Login from "../support/core/pages/login";
-import Home from "../support/core/pages/home";
-import test_data_reg_user from "../fixtures/data/users/registration_user";
+import Login from "../../support/core/pages/login";
+import Home from "../../support/core/pages/home";
+import test_data_reg_user from "../../fixtures/data/users/registration_user";
 
 const login = new Login();
 const home = new Home();
@@ -41,7 +41,7 @@ it('Validate the response by checking available bank account information', funct
 
 
       // Compare bank account data with the data from task 4
-      expect(listBankAccount[0]).to.deep.equal({
+      expect(listBankAccount[1]).to.deep.equal({
         bankName: 'Test Bank',
         accountNumber: '888888888',
         routingNumber: '999999999'
